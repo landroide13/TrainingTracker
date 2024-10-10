@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "965531628383",
+    "project_id": "workout-f2473",
+    "storage_bucket": "workout-f2473.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965531628383:android:956a3a444a32b92a9f7cea",
+        "android_client_info": {
+          "package_name": "Workout_l1_l1.l1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfpYtDMeBBseHqnElmNJEBTWaL9TWEd1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965531628383:android:80831e8d9fd7e7b69f7cea",
+        "android_client_info": {
+          "package_name": "org.nativescript.todoApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfpYtDMeBBseHqnElmNJEBTWaL9TWEd1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

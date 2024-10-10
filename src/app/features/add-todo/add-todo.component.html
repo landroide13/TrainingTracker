@@ -1,0 +1,23 @@
+<ActionBar class="grey">
+    <Label class="white" text="Add Exercise"></Label>
+</ActionBar>
+
+<StackLayout class="form" [formGroup]="excerciseForm">
+        <Label 
+            text="Add Exercise" 
+            textAlignment="center" 
+            verticalAlignment="center"
+            fontSize="22" 
+            fontStyle="italic" marginTop="20"></Label>
+        <TextField margin="5 35" id="exname" formControlName="exname"  hint="Enter Exercise" fontSize="17"></TextField>
+        <TextField margin="5 35" id="sets" formControlName="sets"  hint="Enter Sets" fontSize="17"></TextField>
+        <TextField margin="5 35" id="reps" formControlName="reps"  hint="Enter Reps" fontSize="17"></TextField>
+        <TextField margin="5 35" id="weights" formControlName="weights"  hint="Enter Weights" fontSize="17"></TextField>
+        <Button 
+            text="Add Exercise" 
+            (tap)="onSubmit()" 
+            class="btn" 
+            borderRadius="7" 
+            margin="25 35" fontSize="17"></Button>
+       
+</StackLayout>  

@@ -1,3 +1,13 @@
-<GridLayout>
-  <page-router-outlet></page-router-outlet>
-</GridLayout>
+
+<TabView selectedIndex="0" class="tab" androidTabsPosition="bottom">
+    
+    <GridLayout *tabItem="{ title: 'Exercises' }">
+        <page-router-outlet name="todosTab"></page-router-outlet>
+    </GridLayout>
+    
+    <GridLayout *tabItem="{ title: 'Add-Exercise' }">
+        <page-router-outlet name="addTab"></page-router-outlet>
+    </GridLayout>
+    
+</TabView>
+

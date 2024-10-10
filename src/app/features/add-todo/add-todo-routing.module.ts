@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core'
 import { Routes } from '@angular/router'
 import { NativeScriptRouterModule } from '@nativescript/angular'
 
-import { HomeComponent } from './home.component'
+import { AddTodoComponent } from './add-todo.component'
 
-const routes: Routes = [{ path: '', component: HomeComponent }]
+const routes: Routes = [
+  { path: 'default', component: AddTodoComponent }
+]
 
 @NgModule({
   imports: [NativeScriptRouterModule.forChild(routes)],
   exports: [NativeScriptRouterModule],
 })
-export class HomeRoutingModule {}
+export class AddTodoRoutingModule {}
