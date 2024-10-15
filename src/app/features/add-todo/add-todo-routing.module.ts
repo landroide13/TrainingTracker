@@ -5,7 +5,7 @@ import { NativeScriptRouterModule } from '@nativescript/angular'
 import { AddTodoComponent } from './add-todo.component'
 
 const routes: Routes = [
-  { path: 'default', component: AddTodoComponent }
+  { path: '', component: AddTodoComponent }
 ]
 
 @NgModule({

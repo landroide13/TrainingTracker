@@ -10,7 +10,7 @@ import '@nativescript/firebase-firestore';
     constructor() {}
 
     initFirebase() {
-        firebase().initializeApp();
+        firebase().initializeApp();  
       }
     
       getFirestore() {

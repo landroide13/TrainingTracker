@@ -1,25 +1,28 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 
 import { RouterExtensions } from '@nativescript/angular';
 import { ItemEventData } from '@nativescript/core'
-import { Todo } from '../../core/models/todo.model';
+import { Exercise, Todo } from '../../core/models/todo.model';
+import { ExerciseService } from '../add-todo/exercise.service';
+import { Observable } from 'rxjs';
 
 @Component({
   moduleId: module.id,
   selector: 'ns-todos',
   templateUrl: 'todos.component.html', 
 })
-export class TodosComponent {
+export class TodosComponent implements OnInit{
 
-    constructor(){}
+  exercises: Observable<Exercise[]>
 
-    ngOnInit(){}
+  constructor(private exeServ: ExerciseService){}
 
-    navigateToAddTodo(){}
+  getData(){
+    this.exercises = this.exeServ.getExercises();
+  }
 
-    addTask(){}
-
-    completeTask(task){}
-
+  ngOnInit(){
+    this.getData();
+  }
     
 }

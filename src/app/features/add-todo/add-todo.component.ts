@@ -1,6 +1,8 @@
 import { Component } from '@angular/core'
 
 import { RouterExtensions } from '@nativescript/angular';
+import { Router } from '@angular/router';
+
 import { ItemEventData } from '@nativescript/core'
 import { Exercise, Todo } from '../../core/models/todo.model';
 import { Dialogs } from '@nativescript/core'
@@ -16,7 +18,8 @@ export class AddTodoComponent {
 
   excerciseForm: FormGroup;
 
-  constructor(private exeServ: ExerciseService, private fb: FormBuilder ){}
+  constructor(private exeServ: ExerciseService, 
+              private fb: FormBuilder, private router: RouterExtensions){}
 
     ngOnInit(): void{
       this.excerciseForm = this.fb.group({
@@ -27,17 +30,42 @@ export class AddTodoComponent {
       })
     }
 
-    dialog(){
+    dialog(msg: string){
       Dialogs.alert({
         title: 'Exercise',
-        message: 'Exercise Added !',
+        message: `${msg}`,
         okButtonText: 'OK',
         cancelable: true,
       })
     }
 
-    onSubmit() {
-     this.dialog()
+    goTodos() {
+      this.router.navigate([{ outlets: { todosTab: ['todos'] } }], {
+        transition: {
+          name: 'fade',
+          duration: 300,
+        },
+      });
     }
+
+    clear(){
+
+    }
+
+    onSubmit() {
+      if(this.excerciseForm.valid){
+        const exerciseData = this.excerciseForm.value;
+        this.exeServ.addExercise(exerciseData);
+        this.goTodos();
+        this.dialog(this.excerciseForm.value.exname + " Added !")
+        
+        this.excerciseForm.reset();
+      }else{
+        this.dialog("Form Invalid !!");
+      }
+      
+    }
+
+    
 
 }

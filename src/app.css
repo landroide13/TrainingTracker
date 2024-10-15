@@ -6,8 +6,8 @@
     background-color: rgb(232, 226, 226);
 }
 
-Label{
-    /* font-size: 10; */
+.item{
+    background-color: rgb(61, 60, 60);
 }
 
 .btn{

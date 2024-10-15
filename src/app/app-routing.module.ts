@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core'
 import { Routes } from '@angular/router'
 import { NativeScriptRouterModule, NSEmptyOutletComponent } from '@nativescript/angular'
-import { TodosComponent } from './features/todos/todos.component'
-import { AddTodoComponent } from './features/add-todo/add-todo.component'
 
 const routes: Routes = [
   { 
     path: '', 
-    redirectTo: '/(todosTab:todos/default//addTab:add-todo/default)', 
+    redirectTo: '/(todosTab:todos//addTab:add-todo)', 
     pathMatch: 'full' 
   },
   {

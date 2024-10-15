@@ -4,19 +4,23 @@
   
 
 <StackLayout class="form">
+
     <Label text="Welcome to Fitness Tracker" 
         textAlignment="center" 
         verticalAlignment="center"
         fontSize="25" fontStyle="italic" marginTop="18"></Label>
-    <!-- <TextField [(ngModel)]="newTask" hint="Enter a new task"></TextField>
-    <Button text="Add Task" (tap)="addTask()"></Button>
 
-    <ListView [items]="tasks">
-        <ng-template let-task="item">
-        <StackLayout>
-            <Label [text]="task.name"></Label>
-            <Button text="Complete" *ngIf="!task.completed" (tap)="completeTask(task)"></Button>
-        </StackLayout>
+    <ListView [items]="exercises | async" marginTop="20" height="50%">
+        <ng-template let-exercise="item">
+            <StackLayout class="item" borderRadius="40" width="300">
+                <Label textAlignment="center" 
+                    verticalAlignment="center" 
+                    [text]="exercise.exname" class="white" fontSize="18"></Label>
+                    <Label textAlignment="center" 
+                    verticalAlignment="center" 
+                    [text]="exercise.weights" class="white" fontSize="15"></Label>
+            </StackLayout>
         </ng-template>
-    </ListView> -->
+    </ListView>
+
 </StackLayout>
