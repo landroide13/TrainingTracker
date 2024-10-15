@@ -13,16 +13,22 @@ import { Observable } from 'rxjs';
 })
 export class TodosComponent implements OnInit{
 
-  exercises: Observable<Exercise[]>
+  exercises: Exercise[]
 
   constructor(private exeServ: ExerciseService){}
 
   getData(){
-    this.exercises = this.exeServ.getExercises();
+    this.exeServ.getExercises().subscribe(res => {
+      this.exercises = res
+    });
   }
 
   ngOnInit(){
     this.getData();
   }
+
+  // ngOnChanges(){
+  //   this.getData();
+  // }
     
 }

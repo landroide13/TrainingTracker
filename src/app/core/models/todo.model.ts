@@ -21,6 +21,13 @@ export class Exercise {
   ) {}
 }
 
+export class Set{
+  constructor(
+    public reps: number,
+    public weights: number
+  ){}
+}
+
 // export interface Exercise {
 //     id?: string,
 //     exname?: string,

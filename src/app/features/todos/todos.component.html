@@ -10,7 +10,7 @@
         verticalAlignment="center"
         fontSize="25" fontStyle="italic" marginTop="18"></Label>
 
-    <ListView [items]="exercises | async" marginTop="20" height="50%">
+    <ListView [items]="exercises" marginTop="20" height="50%">
         <ng-template let-exercise="item">
             <StackLayout class="item" borderRadius="40" width="300">
                 <Label textAlignment="center" 

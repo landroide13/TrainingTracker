@@ -1,7 +1,6 @@
 import { Component } from '@angular/core'
 
 import { RouterExtensions } from '@nativescript/angular';
-import { Router } from '@angular/router';
 
 import { ItemEventData } from '@nativescript/core'
 import { Exercise, Todo } from '../../core/models/todo.model';
@@ -48,17 +47,14 @@ export class AddTodoComponent {
       });
     }
 
-    clear(){
-
-    }
-
     onSubmit() {
       if(this.excerciseForm.valid){
         const exerciseData = this.excerciseForm.value;
         this.exeServ.addExercise(exerciseData);
-        this.goTodos();
+        //this.goTodos();
+        this.router.navigate([{ outlets: { todosTab: ['todos'] } }]);
         this.dialog(this.excerciseForm.value.exname + " Added !")
-        
+
         this.excerciseForm.reset();
       }else{
         this.dialog("Form Invalid !!");
