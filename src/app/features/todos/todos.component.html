@@ -10,9 +10,14 @@
         verticalAlignment="center"
         fontSize="25" fontStyle="italic" marginTop="18"></Label>
 
+        <Label text="Exercises " 
+        textAlignment="center" 
+        verticalAlignment="center"
+        fontSize="20" fontStyle="italic" marginTop="18"></Label>    
+
     <ListView [items]="exercises" marginTop="20" height="50%">
         <ng-template let-exercise="item">
-            <StackLayout class="item" borderRadius="40" width="300">
+            <StackLayout class="item" borderRadius="20" width="" margin="10">
                 <Label textAlignment="center" 
                     verticalAlignment="center" 
                     [text]="exercise.exname" class="white" fontSize="18"></Label>

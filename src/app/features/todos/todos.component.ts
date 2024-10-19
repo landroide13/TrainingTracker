@@ -15,9 +15,11 @@ export class TodosComponent implements OnInit{
 
   exercises: Exercise[]
 
-  constructor(private exeServ: ExerciseService){}
+  constructor(private exeServ: ExerciseService){
+    this.getData();
+  }
 
-  getData(){
+  async getData(){
     this.exeServ.getExercises().subscribe(res => {
       this.exercises = res
     });
@@ -26,9 +28,5 @@ export class TodosComponent implements OnInit{
   ngOnInit(){
     this.getData();
   }
-
-  // ngOnChanges(){
-  //   this.getData();
-  // }
     
 }

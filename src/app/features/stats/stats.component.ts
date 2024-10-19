@@ -1,17 +1,14 @@
-import { Component, OnInit } from '@angular/core'
-
-import { RouterExtensions } from '@nativescript/angular';
-import { ItemEventData } from '@nativescript/core'
+import { Component } from '@angular/core';
 import { Exercise, Todo, Workout } from '../../core/models/todo.model';
 import { ExerciseService } from '../add-todo/exercise.service';
 import { Observable } from 'rxjs';
 
 @Component({
   moduleId: module.id,
-  selector: 'ns-workout',
-  templateUrl: 'workout.component.html', 
+  selector: 'ns-stats',
+  templateUrl: 'stats.component.html', 
 })
-export class WorkoutComponent{
+export class StatsComponent{
 
   constructor(private exeServ: ExerciseService){}
 
